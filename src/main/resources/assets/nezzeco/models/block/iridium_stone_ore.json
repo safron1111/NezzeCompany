@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "nezzeco:block/iridium_stone_ore"
+  }
+}

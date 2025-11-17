@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "nezzeco:iridium"
+    }
+  },
+  "result": {
+    "item": "nezzeco:iridium_block"
+  }
+}
