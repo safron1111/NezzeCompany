@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "nezzeco:block/exponential_gel"
+    }
+  }
+}

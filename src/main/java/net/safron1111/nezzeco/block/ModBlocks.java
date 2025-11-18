@@ -13,6 +13,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.safron1111.nezzeco.NezzeCo;
+import net.safron1111.nezzeco.block.custom.*;
 import net.safron1111.nezzeco.item.ModItems;
 
 import java.util.function.Supplier;
@@ -30,6 +31,17 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE).requiresCorrectToolForDrops(), UniformInt.of(3,6)));
     public static final RegistryObject<Block> IRIDIUM_DEEPSLATE_ORE = registerBlock("iridium_deepslate_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_DIAMOND_ORE).requiresCorrectToolForDrops(), UniformInt.of(3,6)));
+
+    public static final RegistryObject<Block> TONE_BLOCK = registerBlock("tone_block",
+            () -> new ToneBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.METAL)));
+    public static final RegistryObject<Block> TRAMPOLINE_BLOCK = registerBlock("trampoline_block",
+            () -> new TrampolineBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.METAL).jumpFactor(1.35f)));
+    public static final RegistryObject<Block> REPULSION_GEL = registerBlock("repulsion_gel",
+            () -> new RepulsionGelBlock(BlockBehaviour.Properties.copy(Blocks.SLIME_BLOCK).sound(SoundType.SLIME_BLOCK).jumpFactor(1.75f)));
+    public static final RegistryObject<Block> PROPULSION_GEL = registerBlock("propulsion_gel",
+            () -> new PropulsionGelBlock(BlockBehaviour.Properties.copy(Blocks.SLIME_BLOCK).sound(SoundType.SLIME_BLOCK).friction(0.995f)));
+    public static final RegistryObject<Block> EXPONENTIAL_GEL = registerBlock("exponential_gel",
+            () -> new ExponentialGelBlock(BlockBehaviour.Properties.copy(Blocks.SLIME_BLOCK).sound(SoundType.SLIME_BLOCK).jumpFactor(1.75f).friction(0.995f)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

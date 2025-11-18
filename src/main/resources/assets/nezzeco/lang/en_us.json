@@ -7,5 +7,12 @@
   "block.nezzeco.iridium_block": "Block of Iridium",
   "block.nezzeco.raw_iridium_block": "Block of Raw Iridium",
   "block.nezzeco.iridium_stone_ore": "Iridium Ore",
-  "block.nezzeco.iridium_deepslate_ore": "Deepslate Iridium Ore"
+  "block.nezzeco.iridium_deepslate_ore": "Deepslate Iridium Ore",
+
+  "block.nezzeco.tone_block": "Tone Block",
+  "block.nezzeco.trampoline_block": "Trampoline Block",
+
+  "block.nezzeco.exponential_gel": "Exponential Gel",
+  "block.nezzeco.propulsion_gel": "Propulsion Gel",
+  "block.nezzeco.repulsion_gel": "Repulsion Gel"
 }

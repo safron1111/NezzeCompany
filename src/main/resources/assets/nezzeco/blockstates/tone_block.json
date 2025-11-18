@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "nezzeco:block/tone_block"
+    }
+  }
+}

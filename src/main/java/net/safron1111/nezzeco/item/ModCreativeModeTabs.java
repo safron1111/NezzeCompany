@@ -25,6 +25,12 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.RAW_IRIDIUM_BLOCK.get());
                         output.accept(ModBlocks.IRIDIUM_STONE_ORE.get());
                         output.accept(ModBlocks.IRIDIUM_DEEPSLATE_ORE.get());
+
+                        output.accept(ModBlocks.TONE_BLOCK.get());
+                        output.accept(ModBlocks.TRAMPOLINE_BLOCK.get());
+                        output.accept(ModBlocks.EXPONENTIAL_GEL.get());
+                        output.accept(ModBlocks.REPULSION_GEL.get());
+                        output.accept(ModBlocks.PROPULSION_GEL.get());
                     })
                     .build());
 
