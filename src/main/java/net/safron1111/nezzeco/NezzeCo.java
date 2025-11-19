@@ -15,6 +15,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.safron1111.nezzeco.block.ModBlocks;
+import net.safron1111.nezzeco.effect.ModEffects;
 import net.safron1111.nezzeco.item.ModCreativeModeTabs;
 import net.safron1111.nezzeco.item.ModItems;
 import org.slf4j.Logger;
@@ -33,6 +34,7 @@ public class NezzeCo {
         ModItems.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEffects.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);

@@ -14,5 +14,7 @@
 
   "block.nezzeco.exponential_gel": "Exponential Gel",
   "block.nezzeco.propulsion_gel": "Propulsion Gel",
-  "block.nezzeco.repulsion_gel": "Repulsion Gel"
+  "block.nezzeco.repulsion_gel": "Repulsion Gel",
+
+  "effect.nezzeco.hypoventilation_effect": "Hypoventilation"
 }
