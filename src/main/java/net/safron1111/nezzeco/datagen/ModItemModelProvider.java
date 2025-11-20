@@ -20,6 +20,8 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         simpleItem(ModItems.IRIDIUM);
         simpleItem(ModItems.RAW_IRIDIUM);
+        simpleItem(ModItems.CHEESE);
+        simpleItem(ModItems.CHEESEBURGER);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

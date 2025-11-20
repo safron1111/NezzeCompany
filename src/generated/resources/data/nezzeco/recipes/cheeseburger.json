@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:bread"
+    },
+    "$": {
+      "item": "minecraft:dried_kelp"
+    },
+    "%": {
+      "item": "nezzeco:cheese"
+    },
+    "&": {
+      "item": "minecraft:cooked_beef"
+    },
+    "@": {
+      "item": "minecraft:bread"
+    }
+  },
+  "pattern": [
+    " @ ",
+    "$&%",
+    " # "
+  ],
+  "result": {
+    "item": "nezzeco:cheeseburger"
+  },
+  "show_notification": true
+}

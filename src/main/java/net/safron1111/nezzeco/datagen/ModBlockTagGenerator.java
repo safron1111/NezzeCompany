@@ -31,6 +31,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.RAW_IRIDIUM_BLOCK.get())
                 .add(ModBlocks.IRIDIUM_DEEPSLATE_ORE.get());
 
+        this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL);
+        this.tag(BlockTags.NEEDS_DIAMOND_TOOL);
         this.tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.IRIDIUM_STONE_ORE.get())
                 .add(ModBlocks.IRIDIUM_DEEPSLATE_ORE.get())

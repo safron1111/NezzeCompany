@@ -16,6 +16,11 @@ public class ModItems {
     public static final RegistryObject<Item> RAW_IRIDIUM = ITEMS.register("raw_iridium",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> CHEESE = ITEMS.register("cheese",
+            () -> new Item(new Item.Properties().food(ModFoods.CHEESE)));
+    public static final RegistryObject<Item> CHEESEBURGER = ITEMS.register("cheeseburger",
+            () -> new Item(new Item.Properties().food(ModFoods.CHEESEBURGER)));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

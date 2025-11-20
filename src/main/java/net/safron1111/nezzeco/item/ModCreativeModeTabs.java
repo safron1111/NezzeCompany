@@ -21,6 +21,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.IRIDIUM.get());
                         output.accept(ModItems.RAW_IRIDIUM.get());
 
+                        output.accept(ModItems.CHEESE.get());
+                        output.accept(ModItems.CHEESEBURGER.get());
+
                         output.accept(ModBlocks.IRIDIUM_BLOCK.get());
                         output.accept(ModBlocks.RAW_IRIDIUM_BLOCK.get());
                         output.accept(ModBlocks.IRIDIUM_STONE_ORE.get());
@@ -31,6 +34,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.EXPONENTIAL_GEL.get());
                         output.accept(ModBlocks.REPULSION_GEL.get());
                         output.accept(ModBlocks.PROPULSION_GEL.get());
+                        output.accept(ModBlocks.REVULSION_GEL.get());
                     })
                     .build());
 

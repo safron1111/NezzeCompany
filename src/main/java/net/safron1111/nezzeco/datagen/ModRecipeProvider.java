@@ -3,6 +3,7 @@ package net.safron1111.nezzeco.datagen;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -14,6 +15,7 @@ import net.safron1111.nezzeco.block.ModBlocks;
 import net.safron1111.nezzeco.item.ModItems;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.function.Consumer;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
@@ -26,8 +28,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreSmelting(pWriter, IRIDIUM_SMELTABLES, RecipeCategory.MISC, ModItems.IRIDIUM.get(), 1.3f, 200, "iridium");
         oreBlasting(pWriter, IRIDIUM_SMELTABLES, RecipeCategory.MISC, ModItems.IRIDIUM.get(), 1.3f, 100, "iridium");
 
+        cookingRecipes(pWriter,"",RecipeSerializer.SMELTING_RECIPE,200,0.35F);
+        cookingRecipes(pWriter,"smoking",RecipeSerializer.SMOKING_RECIPE,100,0.35F);
+        cookingRecipes(pWriter,"campfire_cooking",RecipeSerializer.CAMPFIRE_COOKING_RECIPE,600,0.35F);
+
         pack3By3IntoBlock(RecipeCategory.MISC, ModBlocks.IRIDIUM_BLOCK.get(), ModItems.IRIDIUM.get(), pWriter);
         blockToItemAmount(RecipeCategory.MISC, ModBlocks.IRIDIUM_BLOCK.get(), ModItems.IRIDIUM.get(), 9, pWriter);
+
+        // fourPointStarRecipe example, used to make a cheeseburger, order is Top, Bottom, Left, Right, Center, Output
+        fourPointStarRecipe(RecipeCategory.FOOD,
+                Items.BREAD, Items.BREAD, Items.DRIED_KELP, ModItems.CHEESE.get(), Items.COOKED_BEEF, ModItems.CHEESEBURGER.get(),
+                pWriter);
+    }
+
+    // Add cooked food recipes here, allows for automatically making smelting, smoking, and campfire recipes
+    protected static void cookingRecipes(Consumer<FinishedRecipe> pWriter, String pCookingMethod, RecipeSerializer<? extends AbstractCookingRecipe> pCookingSerializer, int pCookingTime, float pExperience) {
+        simpleCookingRecipe(pWriter, pCookingMethod, pCookingSerializer, pCookingTime, Items.MILK_BUCKET, ModItems.CHEESE.get(), pExperience);
     }
 
     // Various Lists for Recipes \/
@@ -57,6 +73,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("###")
                 .define('#', inputItem)
                 .unlockedBy(getHasName(inputItem), has(inputItem))
+                .save(pWriter);
+    }
+    protected static void fourPointStarRecipe(RecipeCategory pCategory, Item inputItemTop, Item inputItemBottom, Item inputItemLeft, Item inputItemRight, Item inputItemCenter, Item outputItem, Consumer<FinishedRecipe> pWriter) {
+        ShapedRecipeBuilder.shaped(pCategory,outputItem)
+                .pattern(" @ ")
+                .pattern("$&%")
+                .pattern(" # ")
+                .define('@', inputItemTop)
+                .define('#', inputItemBottom)
+                .define('$', inputItemLeft)
+                .define('%', inputItemRight)
+                .define('&', inputItemCenter)
+                .unlockedBy(getHasName(inputItemCenter), has(inputItemCenter))
                 .save(pWriter);
     }
 
@@ -90,5 +119,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     NezzeCo.MOD_ID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
         }
 
+    }
+
+    protected static void simpleCookingRecipe(Consumer<FinishedRecipe> pFinishedRecipeConsumer, String pCookingMethod, RecipeSerializer<? extends AbstractCookingRecipe> pCookingSerializer, int pCookingTime, ItemLike pIngredient, ItemLike pResult, float pExperience) {
+        if (!pCookingMethod.isEmpty()){
+            SimpleCookingRecipeBuilder.generic(Ingredient.of(pIngredient),
+                            RecipeCategory.FOOD, pResult, pExperience, pCookingTime, pCookingSerializer)
+                    .unlockedBy(getHasName(pIngredient),
+                            has(pIngredient)).save(pFinishedRecipeConsumer,
+                            NezzeCo.MOD_ID + ":" + getItemName(pResult) + "_from_" + pCookingMethod);
+        } else {
+            SimpleCookingRecipeBuilder.generic(Ingredient.of(pIngredient),
+                            RecipeCategory.FOOD, pResult, pExperience, pCookingTime, pCookingSerializer)
+                    .unlockedBy(getHasName(pIngredient),
+                            has(pIngredient)).save(pFinishedRecipeConsumer);
+        }
     }
 }

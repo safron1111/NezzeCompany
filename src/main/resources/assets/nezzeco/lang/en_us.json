@@ -4,6 +4,9 @@
   "item.nezzeco.iridium": "Iridium Ingot",
   "item.nezzeco.raw_iridium": "Raw Iridium",
 
+  "item.nezzeco.cheese": "Cheese",
+  "item.nezzeco.cheeseburger": "Cheeseburger",
+
   "block.nezzeco.iridium_block": "Block of Iridium",
   "block.nezzeco.raw_iridium_block": "Block of Raw Iridium",
   "block.nezzeco.iridium_stone_ore": "Iridium Ore",
@@ -15,6 +18,7 @@
   "block.nezzeco.exponential_gel": "Exponential Gel",
   "block.nezzeco.propulsion_gel": "Propulsion Gel",
   "block.nezzeco.repulsion_gel": "Repulsion Gel",
+  "block.nezzeco.revulsion_gel": "Revulsion Gel",
 
   "effect.nezzeco.hypoventilation_effect": "Hypoventilation"
 }

@@ -1,4 +1,8 @@
-// 1.20.1	2025-11-18T22:40:19.2086334	Recipes
+// 1.20.1	2025-11-19T20:34:22.7026907	Recipes
+7bd18cdd7b90fabae6b4523ae694326fd541513c data/nezzeco/advancements/recipes/food/cheese.json
+915571143a66b3660da5aa119f914943d42a331d data/nezzeco/advancements/recipes/food/cheeseburger.json
+9126c634e91cfbf53203b950223ff9edd6c8105d data/nezzeco/advancements/recipes/food/cheese_from_campfire_cooking.json
+152083289dcda84bf3991231f0cc34141ddd2fa1 data/nezzeco/advancements/recipes/food/cheese_from_smoking.json
 ca94412f4497a41d2775e7fc5e7293d68e2963bb data/nezzeco/advancements/recipes/misc/iridium.json
 9d061aea51bfacdffd325d648bae24657d84863d data/nezzeco/advancements/recipes/misc/iridium_block.json
 be2617313b2631993ffd56319be59a887d4c8066 data/nezzeco/advancements/recipes/misc/iridium_from_blasting_iridium_deepslate_ore.json
@@ -7,6 +11,10 @@ e4e70d4280873b782d48c7d0ab1da81e87de7f98 data/nezzeco/advancements/recipes/misc/
 5443dc4591b528fdb98ada52c08570a65620ac17 data/nezzeco/advancements/recipes/misc/iridium_from_smelting_iridium_deepslate_ore.json
 cea1c60324308ee60e55888f52905755a7c16c9e data/nezzeco/advancements/recipes/misc/iridium_from_smelting_iridium_stone_ore.json
 2b295fc55fa4428dfaadc1e4938d3772ae2f1180 data/nezzeco/advancements/recipes/misc/iridium_from_smelting_raw_iridium.json
+a086a56965c67d29ccb5d9cf5f99269c9bd851c1 data/nezzeco/recipes/cheese.json
+da59241212ecf3c106f53998602de7d3ce7b84b3 data/nezzeco/recipes/cheeseburger.json
+ed0076be326d2c713ab3c7126a6bb5141de68686 data/nezzeco/recipes/cheese_from_campfire_cooking.json
+6eef42003f9e7aca9c0ac346f087d757d3b13d80 data/nezzeco/recipes/cheese_from_smoking.json
 4360f5d700b8ff4bef8609c9d3551b1a8bab0318 data/nezzeco/recipes/iridium.json
 737d2555b557f11827ec6d8f0de27d1461fe9627 data/nezzeco/recipes/iridium_block.json
 64d1d1e365d3e5837240b20c7579cea574e5faf5 data/nezzeco/recipes/iridium_from_blasting_iridium_deepslate_ore.json

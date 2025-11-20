@@ -40,6 +40,8 @@ public class ModBlocks {
             () -> new RepulsionGelBlock(BlockBehaviour.Properties.copy(Blocks.SLIME_BLOCK).sound(SoundType.SLIME_BLOCK).jumpFactor(1.75f)));
     public static final RegistryObject<Block> PROPULSION_GEL = registerBlock("propulsion_gel",
             () -> new PropulsionGelBlock(BlockBehaviour.Properties.copy(Blocks.SLIME_BLOCK).sound(SoundType.SLIME_BLOCK).friction(0.995f)));
+    public static final RegistryObject<Block> REVULSION_GEL = registerBlock("revulsion_gel",
+            () -> new PropulsionGelBlock(BlockBehaviour.Properties.copy(Blocks.SLIME_BLOCK).sound(SoundType.SLIME_BLOCK).friction(0.55f)));
     public static final RegistryObject<Block> EXPONENTIAL_GEL = registerBlock("exponential_gel",
             () -> new ExponentialGelBlock(BlockBehaviour.Properties.copy(Blocks.SLIME_BLOCK).sound(SoundType.SLIME_BLOCK).jumpFactor(1.75f).friction(0.995f)));
 

@@ -29,6 +29,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.PROPULSION_GEL);
         blockWithItem(ModBlocks.REPULSION_GEL);
         blockWithItem(ModBlocks.EXPONENTIAL_GEL);
+        blockWithItem(ModBlocks.REVULSION_GEL);
 
         blockCubeBottomTopWithItem(ModBlocks.TRAMPOLINE_BLOCK);
     }

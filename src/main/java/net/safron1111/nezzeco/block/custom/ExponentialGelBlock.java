@@ -36,7 +36,25 @@ public class ExponentialGelBlock extends Block {
     @Override
     public void stepOn(Level pLevel, BlockPos pPos, BlockState pState, Entity pEntity) {
         Vec3 vec3 = pEntity.getDeltaMovement();
-        Vec3 append = new Vec3(vec3.x*0.075f*E,0.0f,vec3.z*0.075f*E);
+        //set newX in case if-else statement doesn't work, and to make it accessible to code outside the if-else statement
+        //statement conserves negatives by default, but isn't powered
+        double newX = vec3.x*0.075f*E;
+        if (vec3.x < 0) {
+            //if vec3.x is negative, powered it to the exponent, but make the whole statement negative
+            newX = -(Math.pow(vec3.x, E)*0.075f);
+        } else {
+            //otherwise power it to the exponent like normal
+            newX = Math.pow(vec3.x, E)*0.075f;
+        }
+        //repeat for Z
+        double newZ = vec3.z*0.075f*E;
+        if (vec3.x < 0) {
+            newZ = -(Math.pow(vec3.z, E)*0.075f);
+        } else {
+            newZ = Math.pow(vec3.z, E)*0.075f;
+        }
+        //don't add y velocity
+        Vec3 append = new Vec3(newX,0.0f,newZ);
         pEntity.addDeltaMovement(append);
         super.stepOn(pLevel, pPos, pState, pEntity);
     }
