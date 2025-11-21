@@ -3,13 +3,17 @@ package net.safron1111.nezzeco.datagen;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.client.model.generators.BlockModelBuilder;
-import net.minecraftforge.client.model.generators.BlockModelProvider;
+import net.minecraft.world.level.block.CropBlock;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 import net.safron1111.nezzeco.NezzeCo;
 import net.safron1111.nezzeco.block.ModBlocks;
+import net.safron1111.nezzeco.block.custom.RyeCropBlock;
+
+import java.util.function.Function;
 
 @SuppressWarnings("removal")
 public class ModBlockStateProvider extends BlockStateProvider {
@@ -32,10 +36,28 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.REVULSION_GEL);
 
         blockCubeBottomTopWithItem(ModBlocks.TRAMPOLINE_BLOCK);
+
+        makeRyeCrop((CropBlock) ModBlocks.RYE_CROP.get(), "rye_stage", "rye_stage");
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
+    }
+
+    //Thanks to Kaupenjoe
+    public void makeRyeCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> ryeStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    //Thanks to Kaupenjoe
+    private ConfiguredModel[] ryeStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((RyeCropBlock) block).getAgeProperty()),
+                new ResourceLocation(NezzeCo.MOD_ID, "block/" + textureName + state.getValue(((RyeCropBlock) block).getAgeProperty()))).renderType("cutout"));
+
+        return models;
     }
 
     private void blockCubeBottomTopWithItem(RegistryObject<Block> blockRegistryObject) {

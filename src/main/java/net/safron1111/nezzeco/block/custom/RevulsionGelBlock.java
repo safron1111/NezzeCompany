@@ -26,7 +26,7 @@ public class RevulsionGelBlock extends Block {
         Vec3 vec3 = pEntity.getDeltaMovement();
         double abs = Math.abs(vec3.x)+Math.abs(vec3.y)+Math.abs(vec3.z);
         if (abs >= 0.1f) {
-            Vec3 newSpeed = new Vec3(vec3.x/2,vec3.y/4,vec3.z/2);
+            Vec3 newSpeed = new Vec3(vec3.x/128,vec3.y/12,vec3.z/128);
             pEntity.setDeltaMovement(newSpeed);
         }
         super.stepOn(pLevel, pPos, pState, pEntity);

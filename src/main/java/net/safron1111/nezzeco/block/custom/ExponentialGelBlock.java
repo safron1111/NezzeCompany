@@ -1,5 +1,6 @@
 package net.safron1111.nezzeco.block.custom;
 
+import com.mojang.logging.LogUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.BlockGetter;
@@ -48,13 +49,14 @@ public class ExponentialGelBlock extends Block {
         }
         //repeat for Z
         double newZ = vec3.z*0.075f*E;
-        if (vec3.x < 0) {
+        if (vec3.z < 0) {
             newZ = -(Math.pow(vec3.z, E)*0.075f);
         } else {
             newZ = Math.pow(vec3.z, E)*0.075f;
         }
         //don't add y velocity
         Vec3 append = new Vec3(newX,0.0f,newZ);
+        LogUtils.getLogger().info(String.valueOf(vec3));
         pEntity.addDeltaMovement(append);
         super.stepOn(pLevel, pPos, pState, pEntity);
     }

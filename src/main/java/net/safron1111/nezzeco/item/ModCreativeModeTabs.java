@@ -24,6 +24,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.CHEESE.get());
                         output.accept(ModItems.CHEESEBURGER.get());
 
+                        output.accept(ModItems.RYE_SEEDS.get());
+                        output.accept(ModItems.RYE.get());
+                        output.accept(ModItems.ERGOT_RYE.get());
+
                         output.accept(ModBlocks.IRIDIUM_BLOCK.get());
                         output.accept(ModBlocks.RAW_IRIDIUM_BLOCK.get());
                         output.accept(ModBlocks.IRIDIUM_STONE_ORE.get());
