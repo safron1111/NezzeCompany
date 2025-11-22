@@ -35,6 +35,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         pack3By3IntoBlock(RecipeCategory.MISC, ModBlocks.IRIDIUM_BLOCK.get(), ModItems.IRIDIUM.get(), pWriter);
         blockToItemAmount(RecipeCategory.MISC, ModBlocks.IRIDIUM_BLOCK.get(), ModItems.IRIDIUM.get(), 9, pWriter);
 
+        breadItem(RecipeCategory.FOOD, ModItems.RYE.get(), ModItems.RYE_BREAD.get(), pWriter);
         // fourPointStarRecipe example, used to make a cheeseburger, order is Top, Bottom, Left, Right, Center, Output
         fourPointStarRecipe(RecipeCategory.FOOD,
                 Items.BREAD, Items.BREAD, Items.DRIED_KELP, ModItems.CHEESE.get(), Items.COOKED_BEEF, ModItems.CHEESEBURGER.get(),
@@ -44,6 +45,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     // Add cooked food recipes here, allows for automatically making smelting, smoking, and campfire recipes
     protected static void cookingRecipes(Consumer<FinishedRecipe> pWriter, String pCookingMethod, RecipeSerializer<? extends AbstractCookingRecipe> pCookingSerializer, int pCookingTime, float pExperience) {
         simpleCookingRecipe(pWriter, pCookingMethod, pCookingSerializer, pCookingTime, Items.MILK_BUCKET, ModItems.CHEESE.get(), pExperience);
+        simpleCookingRecipe(pWriter, pCookingMethod, pCookingSerializer, pCookingTime, ModItems.RYE_DOUGH.get(), ModItems.RYE_BREAD.get(), pExperience);
+        simpleCookingRecipe(pWriter, pCookingMethod, pCookingSerializer, pCookingTime, ModItems.COARSE_RYE_DOUGH.get(), ModItems.PUMPERNICKEL.get(), pExperience);
+
     }
 
     // Various Lists for Recipes \/
@@ -87,6 +91,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('&', inputItemCenter)
                 .unlockedBy(getHasName(inputItemCenter), has(inputItemCenter))
                 .save(pWriter);
+    }
+    protected static void threeInARowIntoItem(RecipeCategory pCategory, Item inputItem, Item outputItem, Consumer<FinishedRecipe> pWriter) {
+        ShapedRecipeBuilder.shaped(pCategory,outputItem)
+                .pattern("###")
+                .define('#', inputItem)
+                .unlockedBy(getHasName(inputItem), has(inputItem))
+                .save(pWriter);
+    }
+    protected static void breadItem(RecipeCategory pCategory, Item inputItem, Item outputItem, Consumer<FinishedRecipe> pWriter) {
+        ShapedRecipeBuilder.shaped(pCategory,outputItem)
+                .pattern("###")
+                .define('#', inputItem)
+                .unlockedBy(getHasName(inputItem), has(inputItem))
+                .save(pWriter,
+                        NezzeCo.MOD_ID + ":" + getItemName(outputItem) + "_from_" + getItemName(inputItem));
     }
 
     protected static void blockToItemAmount(RecipeCategory pCategory, Block pBlock, Item pItem, int count, Consumer<FinishedRecipe> pWriter) {

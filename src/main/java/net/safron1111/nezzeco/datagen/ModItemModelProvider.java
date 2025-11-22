@@ -25,6 +25,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.RYE_SEEDS);
         simpleItem(ModItems.RYE);
         simpleItem(ModItems.ERGOT_RYE);
+        simpleItem(ModItems.RYE_BREAD);
+        simpleItem(ModItems.PUMPERNICKEL);
+        simpleItem(ModItems.CRISPBREAD);
+        simpleItem(ModItems.COARSE_RYE_FLOUR);
+        simpleItem(ModItems.RYE_FLOUR);
+        simpleItem(ModItems.COARSE_RYE_DOUGH);
+        simpleItem(ModItems.RYE_DOUGH);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

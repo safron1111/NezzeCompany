@@ -4,8 +4,19 @@
   "item.nezzeco.iridium": "Iridium Ingot",
   "item.nezzeco.raw_iridium": "Raw Iridium",
 
+  "item.nezzeco.rye": "Rye",
+  "item.nezzeco.ergot_rye": "Ergot Rye",
+  "item.nezzeco.rye_seeds": "Rye Grain",
+  "item.nezzeco.coarse_rye_flour": "Coarse Rye Flour",
+  "item.nezzeco.rye_flour": "Rye Flour",
+  "item.nezzeco.coarse_rye_dough": "Coarse Rye Dough",
+  "item.nezzeco.rye_dough": "Rye Dough",
+
   "item.nezzeco.cheese": "Cheese",
   "item.nezzeco.cheeseburger": "Cheeseburger",
+  "item.nezzeco.rye_bread": "Rye Bread",
+  "item.nezzeco.pumpernickel": "Pumpernickel",
+  "item.nezzeco.crispbread": "Crispbread",
 
   "block.nezzeco.iridium_block": "Block of Iridium",
   "block.nezzeco.raw_iridium_block": "Block of Raw Iridium",

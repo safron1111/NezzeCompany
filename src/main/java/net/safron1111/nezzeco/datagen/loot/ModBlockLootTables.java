@@ -61,7 +61,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                                                 .apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.BLOCK_FORTUNE, 0.3214286F, 3))))
                                 .withPool(LootPool.lootPool().when(lootitemcondition$builderrye7)
                                         .add(LootItem.lootTableItem(ModItems.ERGOT_RYE.get())
-                                                .when(LootItemRandomChanceCondition.randomChance(0.07F))))
+                                                .when(LootItemRandomChanceCondition.randomChance(0.075F))))
                                 .withPool(LootPool.lootPool().when(lootitemcondition$builderrye7)
                                         .add(LootItem.lootTableItem(ModItems.RYE_SEEDS.get())
                                                 .apply(ApplyBonusCount.addBonusBinomialDistributionCount(Enchantments.BLOCK_FORTUNE, 0.1714286F, 1))))));

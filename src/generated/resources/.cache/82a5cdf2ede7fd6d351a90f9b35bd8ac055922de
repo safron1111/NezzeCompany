@@ -1,8 +1,15 @@
-// 1.20.1	2025-11-20T21:53:06.8869209	Item Models: nezzeco
+// 1.20.1	2025-11-21T16:28:43.3679664	Item Models: nezzeco
 3ad1ef6d022da1a4492d7988ae1c00f343d68dac assets/nezzeco/models/item/cheese.json
 f3d363e14d8a59e95687742b99c5008e7f7b849c assets/nezzeco/models/item/cheeseburger.json
+e6aa39d039a0222a70c6cefcccaf55a5ac5fb4d6 assets/nezzeco/models/item/coarse_rye_dough.json
+460453b56c6b10a1e35705e2e0b51db39e0f20e1 assets/nezzeco/models/item/coarse_rye_flour.json
+7a523f70ea42392c0466ee684d0ddb20dc60c7e0 assets/nezzeco/models/item/crispbread.json
 3d42cbbba5a0741cd8740a4db410dc77c0ab5ee4 assets/nezzeco/models/item/ergot_rye.json
 8b05920fa16526e08555213c1fbe593a44dc1249 assets/nezzeco/models/item/iridium.json
+18a82a0f59a406d90ffd42b75efc022bce2db7e5 assets/nezzeco/models/item/pumpernickel.json
 391c3b3ab5dcbe53feb6c128063fd3e6bd5bfad0 assets/nezzeco/models/item/raw_iridium.json
 e230e2ca3dcb753f171df7d83abda06223f427b1 assets/nezzeco/models/item/rye.json
+74cac8ca93c43b13d2bb8d0ca74134668a58e94c assets/nezzeco/models/item/rye_bread.json
+f79cd30b98c5a44d75fc54038b98f9d3bd62eefe assets/nezzeco/models/item/rye_dough.json
+0e778822142bf6e1f1b350f70ec19ac07a13d5de assets/nezzeco/models/item/rye_flour.json
 c17df76ec0cff0e37b783f9251128b6321f53604 assets/nezzeco/models/item/rye_seeds.json

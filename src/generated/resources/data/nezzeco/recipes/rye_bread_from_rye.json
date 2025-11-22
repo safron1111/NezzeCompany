@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "nezzeco:rye"
+    }
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "item": "nezzeco:rye_bread"
+  },
+  "show_notification": true
+}

@@ -27,6 +27,13 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RYE_SEEDS.get());
                         output.accept(ModItems.RYE.get());
                         output.accept(ModItems.ERGOT_RYE.get());
+                        output.accept(ModItems.COARSE_RYE_FLOUR.get());
+                        output.accept(ModItems.RYE_FLOUR.get());
+                        output.accept(ModItems.COARSE_RYE_DOUGH.get());
+                        output.accept(ModItems.RYE_DOUGH.get());
+                        output.accept(ModItems.RYE_BREAD.get());
+                        output.accept(ModItems.PUMPERNICKEL.get());
+                        output.accept(ModItems.CRISPBREAD.get());
 
                         output.accept(ModBlocks.IRIDIUM_BLOCK.get());
                         output.accept(ModBlocks.RAW_IRIDIUM_BLOCK.get());
