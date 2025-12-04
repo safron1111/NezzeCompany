@@ -37,6 +37,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.REPULSION_GEL.get());
         this.dropSelf(ModBlocks.PROPULSION_GEL.get());
         this.dropSelf(ModBlocks.REVULSION_GEL.get());
+        this.dropSelf(ModBlocks.MILLSTONE.get());
 
         this.add(ModBlocks.IRIDIUM_STONE_ORE.get(),
                 block -> createOreDrop(ModBlocks.IRIDIUM_STONE_ORE.get(), ModItems.RAW_IRIDIUM.get()));

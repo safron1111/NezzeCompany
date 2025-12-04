@@ -1,7 +1,9 @@
-// 1.20.1	2025-11-19T18:34:37.8879405	Tags for minecraft:block mod id nezzeco
+// 1.20.1	2025-11-21T23:08:04.5247999	Tags for minecraft:block mod id nezzeco
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/forge/tags/blocks/needs_netherite_tool.json
 b11bc86effbf97e02000e5fa6f415a2293020cd7 data/forge/tags/blocks/ores.json
 b782effaeb106f4df0af3907df4d79678ffa0a66 data/minecraft/tags/blocks/mineable/pickaxe.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/blocks/needs_diamond_tool.json
 12d30ed3dfdccc217c5acca957a93a5ff1e71960 data/minecraft/tags/blocks/needs_iron_tool.json
 6ef8f51566043a054f1e63f9cfc0e364dd62080e data/minecraft/tags/blocks/needs_stone_tool.json
+b11bc86effbf97e02000e5fa6f415a2293020cd7 data/nezzeco/tags/blocks/iridium_ore.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/nezzeco/tags/blocks/needs_iridium_tool.json

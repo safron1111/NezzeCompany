@@ -19,6 +19,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         simpleItem(ModItems.IRIDIUM);
+        simpleItem(ModItems.IRIDIUM_NUGGET);
         simpleItem(ModItems.RAW_IRIDIUM);
         simpleItem(ModItems.CHEESE);
         simpleItem(ModItems.CHEESEBURGER);
@@ -32,11 +33,23 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.RYE_FLOUR);
         simpleItem(ModItems.COARSE_RYE_DOUGH);
         simpleItem(ModItems.RYE_DOUGH);
+
+        toolItem(ModItems.IRIDIUM_SWORD);
+        toolItem(ModItems.IRIDIUM_AXE);
+        toolItem(ModItems.IRIDIUM_SHOVEL);
+        toolItem(ModItems.IRIDIUM_PICKAXE);
+        toolItem(ModItems.IRIDIUM_HOE);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(NezzeCo.MOD_ID, "item/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder toolItem(RegistryObject<Item> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/handheld")).texture("layer0"
+        , new ResourceLocation(NezzeCo.MOD_ID, "item/" + item.getId().getPath()));
     }
 }

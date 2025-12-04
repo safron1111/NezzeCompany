@@ -33,7 +33,7 @@ public class RepulsionGelBlock extends Block {
 
     private void bounce(Entity pEntity) {
         Vec3 vec3 = pEntity.getDeltaMovement();
-        if (vec3.y < 0.0f) {
+        if (vec3.y < -0.05f) {
             pEntity.setDeltaMovement(vec3.x+(vec3.x*0.1),-vec3.y-(vec3.y*0.25),vec3.z+(vec3.z*0.1));
         }
     }

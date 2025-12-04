@@ -2,6 +2,7 @@ package net.safron1111.nezzeco.datagen;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
@@ -9,6 +10,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.safron1111.nezzeco.NezzeCo;
 import net.safron1111.nezzeco.block.ModBlocks;
@@ -34,12 +36,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         pack3By3IntoBlock(RecipeCategory.MISC, ModBlocks.IRIDIUM_BLOCK.get(), ModItems.IRIDIUM.get(), pWriter);
         blockToItemAmount(RecipeCategory.MISC, ModBlocks.IRIDIUM_BLOCK.get(), ModItems.IRIDIUM.get(), 9, pWriter);
+        pack3By3IntoItem(RecipeCategory.MISC, ModItems.IRIDIUM_NUGGET.get(), ModItems.IRIDIUM.get(), pWriter);
+        itemToItemAmount(RecipeCategory.MISC, ModItems.IRIDIUM.get(), ModItems.IRIDIUM_NUGGET.get(), 9, pWriter);
 
         breadItem(RecipeCategory.FOOD, ModItems.RYE.get(), ModItems.RYE_BREAD.get(), pWriter);
         // fourPointStarRecipe example, used to make a cheeseburger, order is Top, Bottom, Left, Right, Center, Output
         fourPointStarRecipe(RecipeCategory.FOOD,
                 Items.BREAD, Items.BREAD, Items.DRIED_KELP, ModItems.CHEESE.get(), Items.COOKED_BEEF, ModItems.CHEESEBURGER.get(),
                 pWriter);
+
+        swordRecipe(RecipeCategory.COMBAT, ModItems.IRIDIUM.get(), ModItems.IRIDIUM_SWORD.get(), pWriter);
+        axeRecipe(RecipeCategory.TOOLS, ModItems.IRIDIUM.get(), ModItems.IRIDIUM_AXE.get(), pWriter);
+        axeRecipeLeft(RecipeCategory.TOOLS, ModItems.IRIDIUM.get(), ModItems.IRIDIUM_AXE.get(), pWriter);
+        shovelRecipe(RecipeCategory.TOOLS, ModItems.IRIDIUM.get(), ModItems.IRIDIUM_SHOVEL.get(), pWriter);
+        pickaxeRecipe(RecipeCategory.TOOLS, ModItems.IRIDIUM.get(), ModItems.IRIDIUM_PICKAXE.get(), pWriter);
+        hoeRecipe(RecipeCategory.TOOLS, ModItems.IRIDIUM.get(), ModItems.IRIDIUM_HOE.get(), pWriter);
+        hoeRecipeLeft(RecipeCategory.TOOLS, ModItems.IRIDIUM.get(), ModItems.IRIDIUM_HOE.get(), pWriter);
     }
 
     // Add cooked food recipes here, allows for automatically making smelting, smoking, and campfire recipes
@@ -70,15 +82,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .unlockedBy(getHasName(pItem), has(pItem))
                         .save(pWriter);
     }
-    protected static void pack3By3IntoItem(RecipeCategory pCategory, Item inputItem, Item outputItem, Consumer<FinishedRecipe> pWriter) {
-        ShapedRecipeBuilder.shaped(pCategory,outputItem)
-                .pattern("###")
-                .pattern("###")
-                .pattern("###")
-                .define('#', inputItem)
-                .unlockedBy(getHasName(inputItem), has(inputItem))
-                .save(pWriter);
-    }
     protected static void fourPointStarRecipe(RecipeCategory pCategory, Item inputItemTop, Item inputItemBottom, Item inputItemLeft, Item inputItemRight, Item inputItemCenter, Item outputItem, Consumer<FinishedRecipe> pWriter) {
         ShapedRecipeBuilder.shaped(pCategory,outputItem)
                 .pattern(" @ ")
@@ -107,7 +110,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(pWriter,
                         NezzeCo.MOD_ID + ":" + getItemName(outputItem) + "_from_" + getItemName(inputItem));
     }
-
+    protected static void pack3By3IntoItem(RecipeCategory pCategory, Item inputItem, Item outputItem, Consumer<FinishedRecipe> pWriter) {
+        ShapedRecipeBuilder.shaped(pCategory,outputItem)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .define('#', inputItem)
+                .unlockedBy(getHasName(inputItem), has(inputItem))
+                .save(pWriter, NezzeCo.MOD_ID + ":" + getItemName(outputItem) + "_from_" + getItemName(inputItem));
+    }
     protected static void blockToItemAmount(RecipeCategory pCategory, Block pBlock, Item pItem, int count, Consumer<FinishedRecipe> pWriter) {
         ShapelessRecipeBuilder.shapeless(pCategory,pItem,count)
                 .requires(pBlock)
@@ -119,6 +130,79 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(inputItem)
                 .unlockedBy(getHasName(inputItem), has(inputItem))
                 .save(pWriter);
+    }
+
+    protected static void swordRecipe(RecipeCategory pCategory, Item inputItem, Item outputItem, Consumer<FinishedRecipe> pWriter) {
+        ShapedRecipeBuilder.shaped(pCategory,outputItem)
+                .pattern("#")
+                .pattern("#")
+                .pattern("/")
+                .define('#', inputItem)
+                .define('/', Items.STICK)
+                .unlockedBy(getHasName(inputItem), has(inputItem))
+                .save(pWriter);
+    }
+    protected static void axeRecipe(RecipeCategory pCategory, Item inputItem, Item outputItem, Consumer<FinishedRecipe> pWriter) {
+        ShapedRecipeBuilder.shaped(pCategory,outputItem)
+                .pattern("##")
+                .pattern("#/")
+                .pattern(" /")
+                .define('#', inputItem)
+                .define('/', Items.STICK)
+                .unlockedBy(getHasName(inputItem), has(inputItem))
+                .save(pWriter);
+    }
+    protected static void axeRecipeLeft(RecipeCategory pCategory, Item inputItem, Item outputItem, Consumer<FinishedRecipe> pWriter) {
+        ShapedRecipeBuilder.shaped(pCategory,outputItem)
+                .pattern("##")
+                .pattern("/#")
+                .pattern("/ ")
+                .define('#', inputItem)
+                .define('/', Items.STICK)
+                .unlockedBy(getHasName(inputItem), has(inputItem))
+                .save(pWriter,
+                        NezzeCo.MOD_ID + ":" + getItemName(outputItem) + "_left");
+    }
+    protected static void shovelRecipe(RecipeCategory pCategory, Item inputItem, Item outputItem, Consumer<FinishedRecipe> pWriter) {
+        ShapedRecipeBuilder.shaped(pCategory,outputItem)
+                .pattern("#")
+                .pattern("/")
+                .pattern("/")
+                .define('#', inputItem)
+                .define('/', Items.STICK)
+                .unlockedBy(getHasName(inputItem), has(inputItem))
+                .save(pWriter);
+    }
+    protected static void pickaxeRecipe(RecipeCategory pCategory, Item inputItem, Item outputItem, Consumer<FinishedRecipe> pWriter) {
+        ShapedRecipeBuilder.shaped(pCategory,outputItem)
+                .pattern("###")
+                .pattern(" / ")
+                .pattern(" / ")
+                .define('#', inputItem)
+                .define('/', Items.STICK)
+                .unlockedBy(getHasName(inputItem), has(inputItem))
+                .save(pWriter);
+    }
+    protected static void hoeRecipe(RecipeCategory pCategory, Item inputItem, Item outputItem, Consumer<FinishedRecipe> pWriter) {
+        ShapedRecipeBuilder.shaped(pCategory,outputItem)
+                .pattern("##")
+                .pattern(" /")
+                .pattern(" /")
+                .define('#', inputItem)
+                .define('/', Items.STICK)
+                .unlockedBy(getHasName(inputItem), has(inputItem))
+                .save(pWriter);
+    }
+    protected static void hoeRecipeLeft(RecipeCategory pCategory, Item inputItem, Item outputItem, Consumer<FinishedRecipe> pWriter) {
+        ShapedRecipeBuilder.shaped(pCategory,outputItem)
+                .pattern("##")
+                .pattern("/ ")
+                .pattern("/ ")
+                .define('#', inputItem)
+                .define('/', Items.STICK)
+                .unlockedBy(getHasName(inputItem), has(inputItem))
+                .save(pWriter,
+                        NezzeCo.MOD_ID + ":" + getItemName(outputItem) + "_left");
     }
 
     // Smelting ==

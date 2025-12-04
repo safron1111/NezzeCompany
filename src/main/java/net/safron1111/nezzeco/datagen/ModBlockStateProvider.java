@@ -7,6 +7,7 @@ import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 import net.safron1111.nezzeco.NezzeCo;
@@ -38,6 +39,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockCubeBottomTopWithItem(ModBlocks.TRAMPOLINE_BLOCK);
 
         makeRyeCrop((CropBlock) ModBlocks.RYE_CROP.get(), "rye_stage", "rye_stage");
+        horizontalBlockWithItem(ModBlocks.MILLSTONE.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/millstone")));
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
@@ -69,5 +72,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         ResourceLocation top = new ResourceLocation(namespace + "block/" + name + "_top");
         simpleBlockWithItem(blockRegistryObject.get(),
                 models().cubeBottomTop(name, side, bottom, top));
+    }
+
+    public void horizontalBlockWithItem(Block block, ModelFile model) {
+        horizontalBlock(block, model);
+        simpleBlockItem(block, model);
     }
 }

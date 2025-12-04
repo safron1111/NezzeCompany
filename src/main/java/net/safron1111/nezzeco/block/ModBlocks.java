@@ -45,6 +45,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> EXPONENTIAL_GEL = registerBlock("exponential_gel",
             () -> new ExponentialGelBlock(BlockBehaviour.Properties.copy(Blocks.SLIME_BLOCK).sound(SoundType.SLIME_BLOCK).jumpFactor(1.75f).friction(0.995f)));
 
+    public static final RegistryObject<Block> MILLSTONE = registerBlock("millstone",
+            () -> new MillstoneBlock(BlockBehaviour.Properties.copy(Blocks.SMOOTH_STONE).noOcclusion()));
+
     //Crops use "BLOCKS.register" instead of "registerBlock" because they have a block, but not an item
     public static final RegistryObject<Block> RYE_CROP = BLOCKS.register("rye_crop",
             () -> new RyeCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));

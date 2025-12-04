@@ -2,7 +2,14 @@
   "creativetab.nezzeco_tab": "Nezze Company",
 
   "item.nezzeco.iridium": "Iridium Ingot",
+  "item.nezzeco.iridium_nugget": "Iridium Nugget",
   "item.nezzeco.raw_iridium": "Raw Iridium",
+
+  "item.nezzeco.iridium_sword": "Iridium Sword",
+  "item.nezzeco.iridium_axe": "Iridium Axe",
+  "item.nezzeco.iridium_shovel": "Iridium Shovel",
+  "item.nezzeco.iridium_pickaxe": "Iridium Pickaxe",
+  "item.nezzeco.iridium_hoe": "Iridium Hoe",
 
   "item.nezzeco.rye": "Rye",
   "item.nezzeco.ergot_rye": "Ergot Rye",
@@ -25,6 +32,7 @@
 
   "block.nezzeco.tone_block": "Tone Block",
   "block.nezzeco.trampoline_block": "Trampoline Block",
+  "block.nezzeco.millstone": "Millstone",
 
   "block.nezzeco.exponential_gel": "Exponential Gel",
   "block.nezzeco.propulsion_gel": "Propulsion Gel",
