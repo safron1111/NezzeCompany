@@ -18,8 +18,15 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.IRIDIUM.get()))
                     .title(Component.translatable("creativetab.nezzeco_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModItems.IRIDIUM.get());
                         output.accept(ModItems.RAW_IRIDIUM.get());
+                        output.accept(ModItems.IRIDIUM.get());
+                        output.accept(ModItems.IRIDIUM_NUGGET.get());
+
+                        output.accept(ModItems.IRIDIUM_SWORD.get());
+                        output.accept(ModItems.IRIDIUM_AXE.get());
+                        output.accept(ModItems.IRIDIUM_SHOVEL.get());
+                        output.accept(ModItems.IRIDIUM_PICKAXE.get());
+                        output.accept(ModItems.IRIDIUM_HOE.get());
 
                         output.accept(ModItems.CHEESE.get());
                         output.accept(ModItems.CHEESEBURGER.get());
@@ -34,6 +41,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RYE_BREAD.get());
                         output.accept(ModItems.PUMPERNICKEL.get());
                         output.accept(ModItems.CRISPBREAD.get());
+                        output.accept(ModBlocks.MILLSTONE.get());
 
                         output.accept(ModBlocks.IRIDIUM_BLOCK.get());
                         output.accept(ModBlocks.RAW_IRIDIUM_BLOCK.get());

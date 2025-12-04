@@ -1,21 +1,21 @@
 package net.safron1111.nezzeco.item;
 
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.safron1111.nezzeco.NezzeCo;
 import net.safron1111.nezzeco.block.ModBlocks;
-import net.safron1111.nezzeco.item.custom.CoarseRyeFlourItem;
-import net.safron1111.nezzeco.item.custom.RyeFlourItem;
+import net.safron1111.nezzeco.item.custom.*;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, NezzeCo.MOD_ID);
 
     public static final RegistryObject<Item> IRIDIUM = ITEMS.register("iridium",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> IRIDIUM_NUGGET = ITEMS.register("iridium_nugget",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RAW_IRIDIUM = ITEMS.register("raw_iridium",
             () -> new Item(new Item.Properties()));
@@ -41,9 +41,20 @@ public class ModItems {
     public static final RegistryObject<Item> RYE_FLOUR = ITEMS.register("rye_flour",
             () -> new RyeFlourItem(new Item.Properties()));
     public static final RegistryObject<Item> RYE_DOUGH = ITEMS.register("rye_dough",
-            () -> new Item(new Item.Properties().food(ModFoods.RYE_DOUGH)));
+            () -> new RyeDoughItem(new Item.Properties().food(ModFoods.RYE_DOUGH)));
     public static final RegistryObject<Item> COARSE_RYE_DOUGH = ITEMS.register("coarse_rye_dough",
-            () -> new Item(new Item.Properties().food(ModFoods.RYE_DOUGH)));
+            () -> new CoarseRyeDoughItem(new Item.Properties().food(ModFoods.RYE_DOUGH)));
+
+    public static final RegistryObject<Item> IRIDIUM_SWORD = ITEMS.register("iridium_sword",
+            () -> new SwordItem(ModToolTiers.IRIDIUM,3, -2.4f, new Item.Properties()));
+    public static final RegistryObject<Item> IRIDIUM_AXE = ITEMS.register("iridium_axe",
+            () -> new AxeItem(ModToolTiers.IRIDIUM,5, -3.0f, new Item.Properties()));
+    public static final RegistryObject<Item> IRIDIUM_SHOVEL = ITEMS.register("iridium_shovel",
+            () -> new ShovelItem(ModToolTiers.IRIDIUM,1.5f, -3.0f, new Item.Properties()));
+    public static final RegistryObject<Item> IRIDIUM_PICKAXE = ITEMS.register("iridium_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.IRIDIUM,1, -2.8f, new Item.Properties()));
+    public static final RegistryObject<Item> IRIDIUM_HOE = ITEMS.register("iridium_hoe",
+            () -> new HoeItem(ModToolTiers.IRIDIUM,-3, -0.0f, new Item.Properties()));
 
     //Seeds use ItemNameBlockItem to make lang easier
     public static final RegistryObject<Item> RYE_SEEDS = ITEMS.register("rye_seeds",

@@ -8,6 +8,7 @@ import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.safron1111.nezzeco.NezzeCo;
 import net.safron1111.nezzeco.block.ModBlocks;
+import net.safron1111.nezzeco.util.ModTags;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -22,6 +23,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(Tags.Blocks.ORES)
                 .add(ModBlocks.IRIDIUM_STONE_ORE.get())
                 .add(ModBlocks.IRIDIUM_DEEPSLATE_ORE.get());
+        this.tag(ModTags.Blocks.IRIDIUM_ORE)
+                .add(ModBlocks.IRIDIUM_STONE_ORE.get())
+                .add(ModBlocks.IRIDIUM_DEEPSLATE_ORE.get());
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.TONE_BLOCK.get())
@@ -32,6 +36,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.IRIDIUM_DEEPSLATE_ORE.get());
 
         this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL);
+        this.tag(ModTags.Blocks.NEEDS_IRIDIUM_TOOL);
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL);
         this.tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.IRIDIUM_STONE_ORE.get())

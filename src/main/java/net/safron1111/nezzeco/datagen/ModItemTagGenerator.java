@@ -6,6 +6,9 @@ import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.safron1111.nezzeco.NezzeCo;
+import net.safron1111.nezzeco.block.ModBlocks;
+import net.safron1111.nezzeco.item.ModItems;
+import net.safron1111.nezzeco.util.ModTags;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -17,6 +20,10 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
-
+        this.tag(ModTags.Items.MILLABLE_COARSE)
+                .add(ModItems.RYE.get())
+                .add(ModItems.ERGOT_RYE.get());
+        this.tag(ModTags.Items.MILLABLE)
+                .add(ModItems.COARSE_RYE_FLOUR.get());
     }
 }

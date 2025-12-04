@@ -1,4 +1,4 @@
-// 1.20.1	2025-11-21T16:28:43.3679664	Item Models: nezzeco
+// 1.20.1	2025-11-21T23:08:04.5238009	Item Models: nezzeco
 3ad1ef6d022da1a4492d7988ae1c00f343d68dac assets/nezzeco/models/item/cheese.json
 f3d363e14d8a59e95687742b99c5008e7f7b849c assets/nezzeco/models/item/cheeseburger.json
 e6aa39d039a0222a70c6cefcccaf55a5ac5fb4d6 assets/nezzeco/models/item/coarse_rye_dough.json
@@ -6,6 +6,12 @@ e6aa39d039a0222a70c6cefcccaf55a5ac5fb4d6 assets/nezzeco/models/item/coarse_rye_d
 7a523f70ea42392c0466ee684d0ddb20dc60c7e0 assets/nezzeco/models/item/crispbread.json
 3d42cbbba5a0741cd8740a4db410dc77c0ab5ee4 assets/nezzeco/models/item/ergot_rye.json
 8b05920fa16526e08555213c1fbe593a44dc1249 assets/nezzeco/models/item/iridium.json
+9a92fd2c25e497633ddea0323b674ab214f85b55 assets/nezzeco/models/item/iridium_axe.json
+6e7643912130520ebfd32b4f2f23de49941eb507 assets/nezzeco/models/item/iridium_hoe.json
+24327be69a76524e4b8699198f2e3ad50ae2b2e2 assets/nezzeco/models/item/iridium_nugget.json
+d41ea098866e78f83e1ea53a07f804d526d15678 assets/nezzeco/models/item/iridium_pickaxe.json
+2094ef7484fa55b28c3869da7cca1d14f736bf3b assets/nezzeco/models/item/iridium_shovel.json
+10335ee3e0b9a9d2d9e21a50fedfa33928d332b3 assets/nezzeco/models/item/iridium_sword.json
 18a82a0f59a406d90ffd42b75efc022bce2db7e5 assets/nezzeco/models/item/pumpernickel.json
 391c3b3ab5dcbe53feb6c128063fd3e6bd5bfad0 assets/nezzeco/models/item/raw_iridium.json
 e230e2ca3dcb753f171df7d83abda06223f427b1 assets/nezzeco/models/item/rye.json

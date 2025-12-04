@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "nezzeco:block/millstone",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "nezzeco:block/millstone"
+    },
+    "facing=south": {
+      "model": "nezzeco:block/millstone",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "nezzeco:block/millstone",
+      "y": 270
+    }
+  }
+}
