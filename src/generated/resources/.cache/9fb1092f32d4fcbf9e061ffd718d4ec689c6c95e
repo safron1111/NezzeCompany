@@ -1,4 +1,4 @@
-// 1.20.1	2025-11-21T23:16:48.2852671	Recipes
+// 1.20.1	2025-12-06T18:26:33.9874612	Recipes
 67b3ab158aad8cae93fc2ebb82a98a02f4f19e61 data/nezzeco/advancements/recipes/combat/iridium_sword.json
 7bd18cdd7b90fabae6b4523ae694326fd541513c data/nezzeco/advancements/recipes/food/cheese.json
 915571143a66b3660da5aa119f914943d42a331d data/nezzeco/advancements/recipes/food/cheeseburger.json
@@ -21,12 +21,14 @@ cd8f6694d467482f6acfd7bfbd1cb6378d573b2b data/nezzeco/advancements/recipes/misc/
 cea1c60324308ee60e55888f52905755a7c16c9e data/nezzeco/advancements/recipes/misc/iridium_from_smelting_iridium_stone_ore.json
 2b295fc55fa4428dfaadc1e4938d3772ae2f1180 data/nezzeco/advancements/recipes/misc/iridium_from_smelting_raw_iridium.json
 0cd7c0b1f8caca13d22940a94019ceb9bb173dbb data/nezzeco/advancements/recipes/misc/iridium_nugget.json
+132ddab69fc9deaeb42d889b1f8609672b8c108e data/nezzeco/advancements/recipes/tools/accelerator.json
 d7c87b73ccaf898c01dab11c9b92017504accfe0 data/nezzeco/advancements/recipes/tools/iridium_axe.json
 6a1483242635618fe6c6d9c89e91f6a912746fc9 data/nezzeco/advancements/recipes/tools/iridium_axe_left.json
 4c18a0391464812908deaa9d4d84f734000cd45d data/nezzeco/advancements/recipes/tools/iridium_hoe.json
 54d91a2fa436b3d9ac964459bb9854198d3905ae data/nezzeco/advancements/recipes/tools/iridium_hoe_left.json
 647645238bd1eafc53856418d4b392c596516986 data/nezzeco/advancements/recipes/tools/iridium_pickaxe.json
 3ca6e70cb136d850ddfbf9aff183e01babdac585 data/nezzeco/advancements/recipes/tools/iridium_shovel.json
+567e6cc601f3c98795959d77083a971d67d76f40 data/nezzeco/recipes/accelerator.json
 a086a56965c67d29ccb5d9cf5f99269c9bd851c1 data/nezzeco/recipes/cheese.json
 da59241212ecf3c106f53998602de7d3ce7b84b3 data/nezzeco/recipes/cheeseburger.json
 ed0076be326d2c713ab3c7126a6bb5141de68686 data/nezzeco/recipes/cheese_from_campfire_cooking.json

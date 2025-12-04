@@ -37,6 +37,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.REVULSION_GEL);
 
         blockCubeBottomTopWithItem(ModBlocks.TRAMPOLINE_BLOCK);
+        blockCubeBottomTopWithItem(ModBlocks.ARROW_TNT_BLOCK);
+        blockCubeBottomTopWithItem(ModBlocks.TATB_BLOCK);
 
         makeRyeCrop((CropBlock) ModBlocks.RYE_CROP.get(), "rye_stage", "rye_stage");
         horizontalBlockWithItem(ModBlocks.MILLSTONE.get(),

@@ -56,6 +56,11 @@ public class ModItems {
     public static final RegistryObject<Item> IRIDIUM_HOE = ITEMS.register("iridium_hoe",
             () -> new HoeItem(ModToolTiers.IRIDIUM,-3, -0.0f, new Item.Properties()));
 
+    public static final RegistryObject<Item> UBERBOW = ITEMS.register("uberbow",
+            () -> new UberBowItem(new Item.Properties()));
+    public static final RegistryObject<Item> ACCELERATOR = ITEMS.register("accelerator",
+            () -> new AcceleratorItem(new Item.Properties()));
+
     //Seeds use ItemNameBlockItem to make lang easier
     public static final RegistryObject<Item> RYE_SEEDS = ITEMS.register("rye_seeds",
             () -> new ItemNameBlockItem(ModBlocks.RYE_CROP.get(), new Item.Properties()));

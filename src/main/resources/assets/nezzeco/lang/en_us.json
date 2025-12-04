@@ -5,6 +5,8 @@
   "item.nezzeco.iridium_nugget": "Iridium Nugget",
   "item.nezzeco.raw_iridium": "Raw Iridium",
 
+  "item.nezzeco.accelerator": "Accelerator",
+
   "item.nezzeco.iridium_sword": "Iridium Sword",
   "item.nezzeco.iridium_axe": "Iridium Axe",
   "item.nezzeco.iridium_shovel": "Iridium Shovel",
@@ -38,6 +40,8 @@
   "block.nezzeco.propulsion_gel": "Propulsion Gel",
   "block.nezzeco.repulsion_gel": "Repulsion Gel",
   "block.nezzeco.revulsion_gel": "Revulsion Gel",
+  "block.nezzeco.arrow_tnt": "Arrow TNT",
+  "block.nezzeco.tatb": "TATB",
 
   "effect.nezzeco.hypoventilation_effect": "Hypoventilation"
 }

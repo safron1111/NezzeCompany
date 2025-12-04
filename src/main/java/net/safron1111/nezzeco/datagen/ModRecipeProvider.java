@@ -10,6 +10,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.safron1111.nezzeco.NezzeCo;
@@ -44,6 +45,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         fourPointStarRecipe(RecipeCategory.FOOD,
                 Items.BREAD, Items.BREAD, Items.DRIED_KELP, ModItems.CHEESE.get(), Items.COOKED_BEEF, ModItems.CHEESEBURGER.get(),
                 pWriter);
+        acceleratorRecipe(RecipeCategory.TOOLS, Blocks.REDSTONE_BLOCK, Blocks.OBSIDIAN, Items.GOLD_INGOT, ModItems.ACCELERATOR.get(), pWriter);
 
         swordRecipe(RecipeCategory.COMBAT, ModItems.IRIDIUM.get(), ModItems.IRIDIUM_SWORD.get(), pWriter);
         axeRecipe(RecipeCategory.TOOLS, ModItems.IRIDIUM.get(), ModItems.IRIDIUM_AXE.get(), pWriter);
@@ -109,6 +111,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(inputItem), has(inputItem))
                 .save(pWriter,
                         NezzeCo.MOD_ID + ":" + getItemName(outputItem) + "_from_" + getItemName(inputItem));
+    }
+    protected static void acceleratorRecipe(RecipeCategory pCategory, Block blockTop, Block blockMiddle, Item inputItemBottom, Item outputItem, Consumer<FinishedRecipe> pWriter) {
+        ShapedRecipeBuilder.shaped(pCategory,outputItem,4)
+                .pattern(" # ")
+                .pattern(" @ ")
+                .pattern("$$$")
+                .define('#', blockTop)
+                .define('@', blockMiddle)
+                .define('$', inputItemBottom)
+                .unlockedBy(getHasName(blockMiddle), has(blockMiddle))
+                .save(pWriter);
     }
     protected static void pack3By3IntoItem(RecipeCategory pCategory, Item inputItem, Item outputItem, Consumer<FinishedRecipe> pWriter) {
         ShapedRecipeBuilder.shaped(pCategory,outputItem)

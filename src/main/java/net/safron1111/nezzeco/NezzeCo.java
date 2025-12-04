@@ -2,6 +2,10 @@ package net.safron1111.nezzeco;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -16,6 +20,10 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.safron1111.nezzeco.block.ModBlocks;
 import net.safron1111.nezzeco.effect.ModEffects;
+import net.safron1111.nezzeco.entity.ModEntities;
+import net.safron1111.nezzeco.entity.client.ArrowTntRenderer;
+import net.safron1111.nezzeco.entity.client.PrimedTatbRenderer;
+import net.safron1111.nezzeco.entity.client.UberArrowRenderer;
 import net.safron1111.nezzeco.item.ModCreativeModeTabs;
 import net.safron1111.nezzeco.item.ModItems;
 import org.slf4j.Logger;
@@ -35,6 +43,7 @@ public class NezzeCo {
         ModCreativeModeTabs.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModEffects.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -72,6 +81,10 @@ public class NezzeCo {
             // Some client setup code
             LOGGER.info("HELLO from client setup");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+
+            EntityRenderers.register(ModEntities.UBER_ARROW.get(), UberArrowRenderer::new);
+            EntityRenderers.register(ModEntities.PRIMED_ARROW_TNT.get(), ArrowTntRenderer::new);
+            EntityRenderers.register(ModEntities.PRIMED_TATB.get(), PrimedTatbRenderer::new);
         }
     }
 }

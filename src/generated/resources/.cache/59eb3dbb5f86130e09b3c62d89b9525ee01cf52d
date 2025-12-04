@@ -1,4 +1,5 @@
-// 1.20.1	2025-11-22T09:32:30.5727113	Loot Tables
+// 1.20.1	2025-12-07T14:42:57.2075686	Loot Tables
+cff27a8005b8d7ef061670e507c7f44b067e59dd data/nezzeco/loot_tables/blocks/arrow_tnt.json
 10651887d66ac6dfdd86c6b8215df065f25c4c74 data/nezzeco/loot_tables/blocks/exponential_gel.json
 e7673ae1759c17e392fababd954c66d7f7b1b503 data/nezzeco/loot_tables/blocks/iridium_block.json
 c47afe5ff0a8410a1c358dbf4a6ea2bacd4d4f70 data/nezzeco/loot_tables/blocks/iridium_deepslate_ore.json
@@ -9,5 +10,6 @@ c47afe5ff0a8410a1c358dbf4a6ea2bacd4d4f70 data/nezzeco/loot_tables/blocks/iridium
 8de56285b393af7df80b981e6e52e01a3d3fbaad data/nezzeco/loot_tables/blocks/repulsion_gel.json
 4220854205062b47d085be1bfc24ac71a57eb186 data/nezzeco/loot_tables/blocks/revulsion_gel.json
 9be0e5811620e89ad8c62dea5c765df6f6779cf5 data/nezzeco/loot_tables/blocks/rye_crop.json
+0adecd92c8f4865bd4337de4e40d7b4cfd2a1763 data/nezzeco/loot_tables/blocks/tatb.json
 f2761e44f27113fdf613961cfadf370a0ea7302a data/nezzeco/loot_tables/blocks/tone_block.json
 57388c0d3f582a341167a7cadad6d570811088a1 data/nezzeco/loot_tables/blocks/trampoline_block.json

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:redstone_block"
+    },
+    "$": {
+      "item": "minecraft:gold_ingot"
+    },
+    "@": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "pattern": [
+    " # ",
+    " @ ",
+    "$$$"
+  ],
+  "result": {
+    "count": 4,
+    "item": "nezzeco:accelerator"
+  },
+  "show_notification": true
+}

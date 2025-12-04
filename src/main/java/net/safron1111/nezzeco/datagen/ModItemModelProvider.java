@@ -39,6 +39,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         toolItem(ModItems.IRIDIUM_SHOVEL);
         toolItem(ModItems.IRIDIUM_PICKAXE);
         toolItem(ModItems.IRIDIUM_HOE);
+        toolItem(ModItems.UBERBOW);
+        toolItem(ModItems.ACCELERATOR);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

@@ -28,6 +28,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.IRIDIUM_PICKAXE.get());
                         output.accept(ModItems.IRIDIUM_HOE.get());
 
+                        output.accept(ModItems.ACCELERATOR.get());
+
                         output.accept(ModItems.CHEESE.get());
                         output.accept(ModItems.CHEESEBURGER.get());
 
@@ -54,6 +56,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.REPULSION_GEL.get());
                         output.accept(ModBlocks.PROPULSION_GEL.get());
                         output.accept(ModBlocks.REVULSION_GEL.get());
+                        output.accept(ModBlocks.ARROW_TNT_BLOCK.get());
+                        output.accept(ModBlocks.TATB_BLOCK.get());
                     })
                     .build());
 

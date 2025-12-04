@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "nezzeco:block/tatb_bottom",
+    "side": "nezzeco:block/tatb_side",
+    "top": "nezzeco:block/tatb_top"
+  }
+}

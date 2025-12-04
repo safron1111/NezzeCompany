@@ -44,6 +44,10 @@ public class ModBlocks {
             () -> new RevulsionGelBlock(BlockBehaviour.Properties.copy(Blocks.SLIME_BLOCK).sound(SoundType.SLIME_BLOCK).friction(0.55f)));
     public static final RegistryObject<Block> EXPONENTIAL_GEL = registerBlock("exponential_gel",
             () -> new ExponentialGelBlock(BlockBehaviour.Properties.copy(Blocks.SLIME_BLOCK).sound(SoundType.SLIME_BLOCK).jumpFactor(1.75f).friction(0.995f)));
+    public static final RegistryObject<Block> ARROW_TNT_BLOCK = registerBlock("arrow_tnt",
+            () -> new ArrowTntBlock(BlockBehaviour.Properties.copy(Blocks.TNT)));
+    public static final RegistryObject<Block> TATB_BLOCK = registerBlock("tatb",
+            () -> new TatbBlock(BlockBehaviour.Properties.copy(Blocks.TNT).sound(SoundType.MOSS)));
 
     public static final RegistryObject<Block> MILLSTONE = registerBlock("millstone",
             () -> new MillstoneBlock(BlockBehaviour.Properties.copy(Blocks.SMOOTH_STONE).noOcclusion()));

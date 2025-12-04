@@ -1,4 +1,5 @@
-// 1.20.1	2025-11-21T23:08:04.5238009	Item Models: nezzeco
+// 1.20.1	2025-12-06T16:41:15.5051655	Item Models: nezzeco
+0dde0954d8c42b02c8e7e281544ac4749d50e1ef assets/nezzeco/models/item/accelerator.json
 3ad1ef6d022da1a4492d7988ae1c00f343d68dac assets/nezzeco/models/item/cheese.json
 f3d363e14d8a59e95687742b99c5008e7f7b849c assets/nezzeco/models/item/cheeseburger.json
 e6aa39d039a0222a70c6cefcccaf55a5ac5fb4d6 assets/nezzeco/models/item/coarse_rye_dough.json
@@ -19,3 +20,4 @@ e230e2ca3dcb753f171df7d83abda06223f427b1 assets/nezzeco/models/item/rye.json
 f79cd30b98c5a44d75fc54038b98f9d3bd62eefe assets/nezzeco/models/item/rye_dough.json
 0e778822142bf6e1f1b350f70ec19ac07a13d5de assets/nezzeco/models/item/rye_flour.json
 c17df76ec0cff0e37b783f9251128b6321f53604 assets/nezzeco/models/item/rye_seeds.json
+154c6584afd4bb668c312fbde3f4ce1c756ff5c1 assets/nezzeco/models/item/uberbow.json

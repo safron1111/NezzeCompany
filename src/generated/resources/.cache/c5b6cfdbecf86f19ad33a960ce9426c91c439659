@@ -1,4 +1,5 @@
-// 1.20.1	2025-11-22T10:23:13.7168748	Block States: nezzeco
+// 1.20.1	2025-12-07T14:42:57.20657	Block States: nezzeco
+9d53b9b22e88d8a3ae3b153df7d6ad1816a79761 assets/nezzeco/blockstates/arrow_tnt.json
 1a76df31531f893e9d0b934486ff7f81ed1bda92 assets/nezzeco/blockstates/exponential_gel.json
 be5e5c07d789ebd732aef4971fd1cdeffbd00217 assets/nezzeco/blockstates/iridium_block.json
 3fc46f1ace536a4ea0e6b678acd73237f0b81357 assets/nezzeco/blockstates/iridium_deepslate_ore.json
@@ -9,8 +10,10 @@ b1d5edc806e40d479899bf694ef78b351a2ac45a assets/nezzeco/blockstates/raw_iridium_
 86ff9290bfaa526519f0a113fc59843099a68a99 assets/nezzeco/blockstates/repulsion_gel.json
 27dc22731348b7798396d95c75d46afac27be298 assets/nezzeco/blockstates/revulsion_gel.json
 b5125f343a05f7394dcf11d964bd04cefd450d86 assets/nezzeco/blockstates/rye_crop.json
+68d3bd1b381691b8ede9230b581e1b4b808d5b68 assets/nezzeco/blockstates/tatb.json
 afacbf3e0d3eb8e27a98d3b89f8e93b1b3a42206 assets/nezzeco/blockstates/tone_block.json
 02ce7261c687184ce31f36555f31d028d53056ae assets/nezzeco/blockstates/trampoline_block.json
+d2cc5df63108b339d02f5f128e7c2a5e48f59dc1 assets/nezzeco/models/block/arrow_tnt.json
 d46e941e948f843acb399b755d501f978a4d418a assets/nezzeco/models/block/exponential_gel.json
 28a97fef9ef829288df8ee6794b35e4d44f96188 assets/nezzeco/models/block/iridium_block.json
 bf48c8bb57e7fc9bc310f0907585ebc89cbfe3f8 assets/nezzeco/models/block/iridium_deepslate_ore.json
@@ -27,8 +30,10 @@ a9960c846e73e06fdd208f1be01f51896d24c86c assets/nezzeco/models/block/rye_stage0.
 993160a46d5d4a43bd0ae973c7996537c9c7b08a assets/nezzeco/models/block/rye_stage5.json
 e460ad257fa5c993eabfe3d8aa4b88796fc1da2a assets/nezzeco/models/block/rye_stage6.json
 014247d940865906ad16919e8e5e924b88606fba assets/nezzeco/models/block/rye_stage7.json
+a31665557b58a7c66c465fa95d89ba2b0f03329e assets/nezzeco/models/block/tatb.json
 b74e11abef2e79a1c17cec81b5ac18123298b890 assets/nezzeco/models/block/tone_block.json
 129ab4514261855851fd8da25d4fe8457df160bb assets/nezzeco/models/block/trampoline_block.json
+65359f6629b0b90d548c5c1ce8b5fe9a4c9bb5e5 assets/nezzeco/models/item/arrow_tnt.json
 f89aeafc0c658aa98a1376b37e99e8d4cadcb5b1 assets/nezzeco/models/item/exponential_gel.json
 2a95a40b8d40410978882891a4a5af4a5623c9af assets/nezzeco/models/item/iridium_block.json
 9b4baefa2954bd5d6985e04ce90ce3e3fa00a5d6 assets/nezzeco/models/item/iridium_deepslate_ore.json
@@ -38,5 +43,6 @@ f89aeafc0c658aa98a1376b37e99e8d4cadcb5b1 assets/nezzeco/models/item/exponential_
 59bb9db99dd7fff082ad98cfefe204571cf0377a assets/nezzeco/models/item/raw_iridium_block.json
 39b78dc005c1cab743567a40ad24a7a31d2ca991 assets/nezzeco/models/item/repulsion_gel.json
 c84672fa9ad0e2c5e45a50831ab17c8691342649 assets/nezzeco/models/item/revulsion_gel.json
+3df14a4c2fe942c19e0582b39521fceb889996d4 assets/nezzeco/models/item/tatb.json
 01aaa3ef616380a7ef6def1c044a48b80a838bf8 assets/nezzeco/models/item/tone_block.json
 1b82fac9717c3affb4652de52d50748ef38c049e assets/nezzeco/models/item/trampoline_block.json
